@@ -1,0 +1,12 @@
+Source: ros-galactic-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest, python3-pytest-mock, ros-galactic-ament-copyright, ros-galactic-ament-flake8, ros-galactic-ament-lint-auto, ros-galactic-ament-mypy, ros-galactic-ament-pep257, ros-galactic-ament-pycodestyle, ros-galactic-ros-testing, ros-galactic-test-msgs, ros-galactic-ros-workspace, python3-all, python3-setuptools
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-galactic-nodl-python, ros-galactic-ros2cli, ros-galactic-ros2nodl, ros-galactic-ros2run, ros-galactic-sros2, ros-galactic-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
