@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>nodl_to_policy</name>
+  <version>1.0.0</version>
+  <description>Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system</description>
+  <author email="abrar@openrobotics.org">Abrar Rahman Protyasha</author>
+  <maintainer email="abrar@openrobotics.org">Abrar Rahman Protyasha</maintainer>
+  <license>Apache License 2.0</license>
+
+  <exec_depend>nodl_python</exec_depend>
+  <exec_depend>python3-argcomplete</exec_depend>
+  <exec_depend>python3-lxml</exec_depend>
+  <exec_depend>ros2cli</exec_depend>
+  <exec_depend>ros2nodl</exec_depend>
+  <exec_depend>ros2run</exec_depend>
+  <exec_depend>sros2</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_mypy</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>ament_pycodestyle</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>python3-pytest-mock</test_depend>
+
+  <test_depend>ros_testing</test_depend>
+  <test_depend>test_msgs</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

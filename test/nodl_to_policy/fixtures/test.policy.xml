@@ -1,0 +1,74 @@
+<policy version="0.2.0">
+  <enclaves>
+    <enclave path="/node_1">
+      <profiles>
+        <profile node="node_1" ns="/">
+          <services reply="ALLOW">
+            <service>~/describe_parameters</service>
+            <service>~/get_parameter_types</service>
+            <service>~/get_parameters</service>
+            <service>~/list_parameters</service>
+            <service>~/set_parameters</service>
+            <service>~/set_parameters_atomically</service>
+          </services>
+          <services request="ALLOW">
+            <service>~/describe_parameters</service>
+            <service>~/get_parameter_types</service>
+            <service>~/get_parameters</service>
+            <service>~/list_parameters</service>
+            <service>~/set_parameters</service>
+            <service>~/set_parameters_atomically</service>
+          </services>
+          <topics subscribe="ALLOW">
+            <topic>clock</topic>
+            <topic>parameter_events</topic>
+          </topics>
+          <topics publish="ALLOW">
+            <topic>chatter</topic>
+            <topic>parameter_events</topic>
+            <topic>rosout</topic>
+          </topics>
+        </profile>
+      </profiles>
+    </enclave>
+    <enclave path="/node_2">
+      <profiles>
+        <profile node="node_2" ns="/">
+          <actions execute="ALLOW">
+            <action>example_action</action>
+          </actions>
+          <actions call="ALLOW">
+            <action>example_action</action>
+          </actions>
+          <services reply="ALLOW">
+            <service>example_service_2</service>
+            <service>~/describe_parameters</service>
+            <service>~/get_parameter_types</service>
+            <service>~/get_parameters</service>
+            <service>~/list_parameters</service>
+            <service>~/set_parameters</service>
+            <service>~/set_parameters_atomically</service>
+          </services>
+          <services request="ALLOW">
+            <service>example_service</service>
+            <service>~/describe_parameters</service>
+            <service>~/get_parameter_types</service>
+            <service>~/get_parameters</service>
+            <service>~/list_parameters</service>
+            <service>~/set_parameters</service>
+            <service>~/set_parameters_atomically</service>
+          </services>
+          <topics subscribe="ALLOW">
+            <topic>clock</topic>
+            <topic>foo/bar</topic>
+            <topic>parameter_events</topic>
+          </topics>
+          <topics publish="ALLOW">
+            <topic>parameter_events</topic>
+            <topic>rosout</topic>
+          </topics>
+        </profile>
+      </profiles>
+    </enclave>
+  </enclaves>
+</policy>
