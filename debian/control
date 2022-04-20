@@ -1,0 +1,12 @@
+Source: ros-humble-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-humble-ament-copyright <!nocheck>, ros-humble-ament-flake8 <!nocheck>, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-mypy <!nocheck>, ros-humble-ament-pep257 <!nocheck>, ros-humble-ament-pycodestyle <!nocheck>, ros-humble-ros-testing <!nocheck>, ros-humble-test-msgs <!nocheck>, ros-humble-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-humble-nodl-python, ros-humble-ros2cli, ros-humble-ros2nodl, ros-humble-ros2run, ros-humble-sros2, ros-humble-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
