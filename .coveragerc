@@ -1,0 +1,6 @@
+[run]
+omit =
+    # omit test directory
+    test/*
+    setup.py
+branch=True
