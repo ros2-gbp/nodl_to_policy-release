@@ -1,0 +1,12 @@
+Source: ros-rolling-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-rolling-ament-copyright <!nocheck>, ros-rolling-ament-flake8 <!nocheck>, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-mypy <!nocheck>, ros-rolling-ament-pep257 <!nocheck>, ros-rolling-ament-pycodestyle <!nocheck>, ros-rolling-ros-testing <!nocheck>, ros-rolling-test-msgs <!nocheck>, ros-rolling-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-rolling-nodl-python, ros-rolling-ros2cli, ros-rolling-ros2nodl, ros-rolling-ros2run, ros-rolling-sros2, ros-rolling-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
