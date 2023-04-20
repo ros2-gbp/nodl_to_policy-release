@@ -1,0 +1,12 @@
+Source: ros-iron-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-iron-ament-copyright <!nocheck>, ros-iron-ament-flake8 <!nocheck>, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-mypy <!nocheck>, ros-iron-ament-pep257 <!nocheck>, ros-iron-ament-pycodestyle <!nocheck>, ros-iron-ros-testing <!nocheck>, ros-iron-test-msgs <!nocheck>, ros-iron-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-iron-nodl-python, ros-iron-ros2cli, ros-iron-ros2nodl, ros-iron-ros2run, ros-iron-sros2, ros-iron-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
