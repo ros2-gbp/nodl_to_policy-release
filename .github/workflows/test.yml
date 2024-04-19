@@ -1,0 +1,46 @@
+name: nodl_to_policy
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-20.04
+        ros_distribution:
+          - galactic
+    steps:
+      # actions/checkout is not used because of a known issue where `colcon` cannot be found
+      # https://github.com/ros-tooling/setup-ros/issues/75
+      - name: Setup ROS2
+        uses: ros-tooling/setup-ros@v0.2
+        with:
+          use-ros2-testing: true
+          required-ros-distributions: ${{ matrix.ros_distribution }}
+
+      - name: Test nodl_to_policy
+        uses: ros-tooling/action-ros-ci@v0.2
+        id: action_ros_ci
+        with:
+          package-name: nodl_to_policy
+          colcon-defaults: |
+            {
+              "test": {
+                "mixin": ["coverage-pytest"]
+              }
+            }
+          colcon-mixin-repository: https://raw.githubusercontent.com/colcon/colcon-mixin-repository/1ddb69bedfd1f04c2f000e95452f7c24a4d6176b/index.yaml
+          target-ros2-distro: ${{ matrix.ros_distribution }}
+
+      - name: Upload Logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: colcon_logs
+          path: ${{ steps.action_ros_ci.outputs.ros-workspace-directory-name }}/log
+        if: always()
