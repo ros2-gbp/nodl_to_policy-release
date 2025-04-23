@@ -1,0 +1,12 @@
+Source: ros-kilted-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-kilted-ament-copyright <!nocheck>, ros-kilted-ament-flake8 <!nocheck>, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ament-mypy <!nocheck>, ros-kilted-ament-pep257 <!nocheck>, ros-kilted-ament-pycodestyle <!nocheck>, ros-kilted-ros-testing <!nocheck>, ros-kilted-test-msgs <!nocheck>, ros-kilted-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-kilted-nodl-python, ros-kilted-ros2cli, ros-kilted-ros2nodl, ros-kilted-ros2run, ros-kilted-sros2, ros-kilted-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
