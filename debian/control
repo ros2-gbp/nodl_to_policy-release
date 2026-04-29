@@ -1,0 +1,12 @@
+Source: ros-lyrical-nodl-to-policy
+Section: misc
+Priority: optional
+Maintainer: Abrar Rahman Protyasha <abrar@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest <!nocheck>, python3-pytest-mock <!nocheck>, ros-lyrical-ament-copyright <!nocheck>, ros-lyrical-ament-flake8 <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-mypy <!nocheck>, ros-lyrical-ament-pep257 <!nocheck>, ros-lyrical-ament-pycodestyle <!nocheck>, ros-lyrical-ros-testing <!nocheck>, ros-lyrical-test-msgs <!nocheck>, ros-lyrical-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://index.ros.org/p/nodl_to_policy/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-nodl-to-policy
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, python3-argcomplete, python3-lxml, ros-lyrical-nodl-python, ros-lyrical-ros2cli, ros-lyrical-ros2nodl, ros-lyrical-ros2run, ros-lyrical-sros2, ros-lyrical-ros-workspace
+Description: Package to generate a ROS 2 Access Control Policy from the NoDL description of a ROS system
